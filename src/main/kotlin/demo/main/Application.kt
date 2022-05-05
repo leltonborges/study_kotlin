@@ -14,6 +14,30 @@ fun main(){
 
     println("Titular: $titular")
     println("Nome completo: $nomeSobrenome")
+
+    if(balance > 0.0){
+        println("Saldo positivo")
+    }else if(balance.equals(0.0)){
+        println("Sem saldo")
+    } else {
+        println("Saldo da conta esta negativado")
+    }
+
+    balance -= balance;
+
+    when{
+        balance > 0.0 -> println("Saldo positivo")
+        balance == 0.0 -> println("Sem saldo")
+        else -> println("Saldo da conta esta negativado")
+    }
+
+    balance -= 312;
+
+    when{
+        balance > 0.0 -> println("Saldo positivo")
+        balance == 0.0 -> println("Sem saldo")
+        else -> println("Saldo da conta esta negativado")
+    }
 }
 
 fun lelton(nome:String): String{
