@@ -10,14 +10,19 @@ fun main(){
 
     val accountNumber = 10023;
     var balance: Double = 100.0;
-    balance += 1;
+    coditionStructures(titular, nomeSobrenome, balance)
+}
+
+private fun coditionStructures(titular: String, nomeSobrenome: String, balanceAccount: Double ) {
 
     println("Titular: $titular")
     println("Nome completo: $nomeSobrenome")
 
-    if(balance > 0.0){
+    var balance = balanceAccount;
+
+    if (balance > 0.0) {
         println("Saldo positivo")
-    }else if(balance.equals(0.0)){
+    } else if (balance.equals(0.0)) {
         println("Sem saldo")
     } else {
         println("Saldo da conta esta negativado")
@@ -25,7 +30,7 @@ fun main(){
 
     balance -= balance;
 
-    when{
+    when {
         balance > 0.0 -> println("Saldo positivo")
         balance == 0.0 -> println("Sem saldo")
         else -> println("Saldo da conta esta negativado")
@@ -33,7 +38,7 @@ fun main(){
 
     balance -= 312;
 
-    when{
+    when {
         balance > 0.0 -> println("Saldo positivo")
         balance == 0.0 -> println("Sem saldo")
         else -> println("Saldo da conta esta negativado")
