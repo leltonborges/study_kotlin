@@ -1,15 +1,12 @@
 package demo.main.domain
 
-import java.util.UUID
+import java.util.*
 
 class Conta(
-    private var owner: String,
-    private var numberAccount: Int,
-    private var balanceAccount: Double
+    private val owner: String,
+    private val numberAccount: Int = UUID.randomUUID().variant(),
+    private var balanceAccount: Double = 0.0
 ) {
-
-    constructor(owner: String, numberAccount: Int) : this(owner, numberAccount, 0.0)
-    constructor(owner: String,) : this(owner, UUID.randomUUID().variant())
 
     public fun sacar(saque: Double): Double {
 
