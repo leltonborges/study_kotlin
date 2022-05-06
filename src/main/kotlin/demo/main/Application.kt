@@ -1,6 +1,8 @@
 package demo.main
 
-fun main(){
+import demo.main.domain.Conta
+
+fun main() {
     println("Hello");
     val titular = "Lelton";
     var nome: String = "José";
@@ -11,9 +13,41 @@ fun main(){
     val accountNumber = 10023;
     var balance: Double = 100.0;
     coditionStructures(titular, nomeSobrenome, balance)
+    repeatStructure()
+    var c1 = Conta("João", 2323, 4.2);
 }
 
-private fun coditionStructures(titular: String, nomeSobrenome: String, balanceAccount: Double ) {
+private fun repeatStructure() {
+
+    // for with range
+    for (i in 1..10) {
+        println(i);
+    }
+
+    println("\nfor with step")
+    // for with range step
+    for (i in 1..10 step 2) {
+        println(i);
+    }
+
+    println("\nfor with downTo 'Desc'")
+    for (i in 10 downTo 0 step 3)
+        println(i)
+
+    println("\nfor with iterator")
+    main@ for (i in 0..30){
+        println(i)
+        subloo@ for (j in 1..20) {
+            if(i == 2 ) continue@main
+            if(j == 2) continue@main
+            if(i == 5) break@main
+            println(j)
+        }
+
+    }
+}
+
+private fun coditionStructures(titular: String, nomeSobrenome: String, balanceAccount: Double) {
 
     println("Titular: $titular")
     println("Nome completo: $nomeSobrenome")
@@ -45,6 +79,6 @@ private fun coditionStructures(titular: String, nomeSobrenome: String, balanceAc
     }
 }
 
-fun lelton(nome:String): String{
+fun lelton(nome: String): String {
     return "$nome Borges";
 }
