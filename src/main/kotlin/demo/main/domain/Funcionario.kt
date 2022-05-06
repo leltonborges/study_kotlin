@@ -6,8 +6,7 @@ open class Funcionario(
     var salario: Double = 0.0,
     val tipoFuncionario: TypeEmploee = TypeEmploee.ESTAGIARIO
 ) {
-
-    fun bonificacao(): Double {
+    open fun getBonificacao(): Double {
         return this.tipoFuncionario.salario(this.salario);
     }
 }

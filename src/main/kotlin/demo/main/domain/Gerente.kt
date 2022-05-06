@@ -7,4 +7,5 @@ class Gerente(
     tipoFuncionario: TypeEmploee = TypeEmploee.ESTAGIARIO
 ) : Funcionario(name, cpf, salario, tipoFuncionario) {
 
+    override fun getBonificacao(): Double = this.tipoFuncionario.salario(this.salario);
 }
