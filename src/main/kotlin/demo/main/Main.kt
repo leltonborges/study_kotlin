@@ -1,9 +1,6 @@
 package demo.main;
 
-import demo.main.domain.Conta
-import demo.main.domain.Funcionario
-import demo.main.domain.Gerente
-import demo.main.domain.TypeEmploee
+import demo.main.domain.*
 
 fun main() {
     var c1 = Conta("Alex");
@@ -13,5 +10,8 @@ fun main() {
 
     var g1 = Gerente("Bia", "4322", 43000.00, TypeEmploee.GERENTE);
     println("bonificação: ${g1.getBonificacao()}")
+
+    val ca1 = CalculadoraBonificacao()
+
 
 }
