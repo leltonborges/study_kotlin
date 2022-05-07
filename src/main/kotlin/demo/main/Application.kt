@@ -1,6 +1,6 @@
 package demo.main
 
-import demo.main.domain.Conta
+import demo.main.conta.Conta
 
 fun main() {
     println("Hello");

@@ -1,4 +1,6 @@
-package demo.main.domain
+package demo.main.conta
+
+import demo.main.funcionario.Funcionario
 
 class CalculadoraBonificacao {
     var total: Double = 0.0

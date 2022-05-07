@@ -1,6 +1,6 @@
-package demo.main.domain
+package demo.main.funcionario
 
-enum class TypeEmploee(
+enum class TipoFuncionario(
     private val id: Int,
     private val desc: String,
     private val bonificacao: Double

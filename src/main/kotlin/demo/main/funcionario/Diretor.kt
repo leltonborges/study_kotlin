@@ -1,13 +1,14 @@
-package demo.main.domain
+package demo.main.funcionario
 
-class Gerente(
+class Diretor(
     name: String,
     cpf: String,
     salario: Double = 0.0,
-    tipoFuncionario: TypeEmploee = TypeEmploee.ESTAGIARIO
+    tipoFuncionario: TipoFuncionario = TipoFuncionario.ESTAGIARIO
 ) : Funcionario(name, cpf, salario, tipoFuncionario) {
 
     override fun getBonificacao(): Double {
-        return this.tipoFuncionario.salario(this.salario)
+        return tipoFuncionario.salario(this.salario);
     }
+
 }
