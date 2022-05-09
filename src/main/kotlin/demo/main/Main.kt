@@ -34,4 +34,5 @@ fun main() {
     println("Nome client ${fran.name}")
     println("contas: ${Conta.total}")
 
+    println(g1)
 }

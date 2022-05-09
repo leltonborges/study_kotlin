@@ -43,4 +43,10 @@ abstract class Conta(
         }
         return false;
     }
+
+    override fun toString(): String {
+        return "Conta(owner='$owner', numberAccount=$numberAccount, balanceAccount=$balanceAccount)"
+    }
+
+
 }

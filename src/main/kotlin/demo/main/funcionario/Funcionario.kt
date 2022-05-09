@@ -21,4 +21,15 @@ abstract class Funcionario(
         }
         return false;
     }
+
+    override fun toString(): String {
+        return """Funcionario(
+                |name='$name', 
+                |cpf='$cpf', 
+                |salario=$salario, 
+                |tipoFuncionario=$tipoFuncionario, 
+                |senha='$senha')""".trimMargin()
+    }
+
+
 }

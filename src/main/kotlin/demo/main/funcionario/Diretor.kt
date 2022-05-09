@@ -12,4 +12,6 @@ class Diretor(
     override fun getBonificacao(): Double {
         return tipoFuncionario.salario(this.salario);
     }
+
+
 }
