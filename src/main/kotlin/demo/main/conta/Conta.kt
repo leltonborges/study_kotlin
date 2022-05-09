@@ -7,6 +7,16 @@ abstract class Conta(
     private val numberAccount: Int = UUID.randomUUID().variant(),
     private var balanceAccount: Double = 0.0
 ) {
+    companion object Contador{
+        var total: Int = 0
+            private set
+    }
+
+    init {
+        total++;
+    }
+
+    fun getTotalContas(): Int = total;
 
     abstract fun isSaldoSuficiente(value: Double): Boolean;
     abstract fun calcImpostoSaque(): Double;

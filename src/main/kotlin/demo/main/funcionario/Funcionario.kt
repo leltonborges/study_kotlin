@@ -6,7 +6,8 @@ abstract class Funcionario(
     val name: String,
     val cpf: String,
     var salario: Double = 0.0,
-    val tipoFuncionario: TipoFuncionario = TipoFuncionario.ESTAGIARIO
+    val tipoFuncionario: TipoFuncionario = TipoFuncionario.ESTAGIARIO,
+    protected val senha: String
 ) : Autenticavel {
     abstract fun getBonificacao(): Double;
 

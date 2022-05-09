@@ -6,8 +6,9 @@ abstract class FuncionarioAdmin(
     name: String,
     cpf: String,
     salario: Double = 0.0,
-    tipoFuncionario: TipoFuncionario = TipoFuncionario.ESTAGIARIO
-) : Funcionario(name, cpf, salario, tipoFuncionario) , Autenticavel{
+    tipoFuncionario: TipoFuncionario = TipoFuncionario.ESTAGIARIO,
+    senha: String
+) : Funcionario(name, cpf, salario, tipoFuncionario, senha) , Autenticavel{
 
     override fun autentica(senha: String): Boolean {
         if (this.senha.equals(senha)) {

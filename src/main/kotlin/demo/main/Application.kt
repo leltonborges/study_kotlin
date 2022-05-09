@@ -1,6 +1,7 @@
 package demo.main
 
 import demo.main.conta.Conta
+import demo.main.conta.ContaPoupanca
 
 fun main() {
     println("Hello");
@@ -11,10 +12,10 @@ fun main() {
     val nomeSobrenome = lelton(nome);
 
     val accountNumber = 10023;
-    var balance: Double = 100.0;
+    val balance: Double = 100.0;
     coditionStructures(titular, nomeSobrenome, balance)
     repeatStructure()
-    var c1 = Conta("João", 2323, 4.2);
+    var c1 = ContaPoupanca("João", 2323, 4.2);
 }
 
 private fun repeatStructure() {
