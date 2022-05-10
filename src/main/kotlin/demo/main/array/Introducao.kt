@@ -1,7 +1,5 @@
 package demo.main.array
 
-}
-
 fun main() {
     val idades: IntArray = intArrayOf(23, 32,4,25,16);
 
