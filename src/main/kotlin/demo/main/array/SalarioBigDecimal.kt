@@ -8,8 +8,12 @@ fun main() {
 
     val aumentoSalarial: Array<BigDecimal> = salarios.mapNotNull { sla -> calcAumentoRelativo(sla) }.toTypedArray()
     println(aumentoSalarial.contentToString())
+    val gastoInicial = aumentoSalarial.somatoria()
+    println("Somatório $gastoInicial")
 
-    println("Somatório ${ aumentoSalarial.somatoria() }")
+    val meses = "6".toBigDecimal()
+    val gastosEmSeisMeses = aumentoSalarial.fold(gastoInicial) { acumulador, salario -> acumulador.add(salario.multiply(meses)) }
+    println("Gastos em 6 meses:  $gastosEmSeisMeses")
 }
 
 private fun calcAumentoRelativo(sla: BigDecimal): BigDecimal? {
