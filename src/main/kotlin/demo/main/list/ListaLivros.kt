@@ -29,5 +29,25 @@ fun main() {
 
     val livros: MutableList<Livro> = mutableListOf(livro1, livro2, livro3, livro4)
     livros.add(Livro("Sagarana", "João Guimarẽs Rosa", 1946))
-    
+
+    println()
+    livros.imprime()
+
+    println()
+    val livrosOrdenadoPorAno = livros.sorted()
+    livrosOrdenadoPorAno.imprime()
+
+    println()
+    val livrosOrdenadoPorTitulo = livros.sortedBy { it.titulo }
+    livrosOrdenadoPorTitulo.imprime()
+
+    println()
+    val livrosOrdenadoPorAutor = livros.sortedBy { it.autor }
+    livrosOrdenadoPorAutor.imprime()
+
+}
+
+fun List<Livro>.imprime(){
+    val joinToString = this.joinToString(separator = "\n") { l: Livro -> "- ${l.titulo} de ${l.autor}" }
+    println(joinToString)
 }
