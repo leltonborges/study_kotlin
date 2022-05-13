@@ -33,4 +33,18 @@ fun main() {
     val pedidoAssociateWith2 = pedidos.associateWith { p -> p.value > 50.0 }
     println(pedidoAssociateWith2)
     println(pedidoAssociateWith2.filterValues { v -> v == true })
+
+    println()
+    ///////////// groupBy //////////////////////////
+
+    val pedidoGroupBy = pedidos.groupBy { p -> p.value > 50.0 }
+    println(pedidoGroupBy)
+    println(pedidoGroupBy.get(true))
+
+    println()
+    val nomes = listOf("Ana", "Bia", "Lia", "Bob", "Marcos", "Maria", "Gui", "Lis", "ALex", "Ju")
+    val namesFirstChar = nomes.groupBy { n -> n.first() }
+    println(namesFirstChar)
+    println(namesFirstChar['A'])
+
 }
