@@ -28,6 +28,29 @@ fun main() {
     val somaFunction2: (Int, Int) -> Int = fun(a, b): Int { return a + b }
     println(somaFunction1(5, 1))
     println(somaFunction2(5, 1))
+
+    ///////////////////// Mult retorn /////////////////////
+
+    ////////////// COm lambda
+    val calculaBonificacao: (salario: Double) -> Double = lamb@{
+        if (it < 1000)
+            return@lamb it + 100
+
+        return@lamb it + 130;
+    }
+
+    println(calculaBonificacao(1050.0))
+    println(calculaBonificacao(300.0))
+
+
+    ////////////// com função Anonimal ///////////////
+    val calculaBonificacaoFunc: (salario: Double) -> Double = fun(salario: Double): Double {
+        if (salario < 1000)
+            return salario + 100
+
+        return salario + 130;
+    }
+
 }
 
 fun soma(a: Int, b: Int): Int = a + b
