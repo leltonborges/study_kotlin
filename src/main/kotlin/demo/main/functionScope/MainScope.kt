@@ -21,4 +21,10 @@ fun main() {
         println(end2.uf)
         println(end2.logradouro)
     }
+
+    println()
+    run {
+        println("Execução de run sem extensão")
+    }
+    
 }
