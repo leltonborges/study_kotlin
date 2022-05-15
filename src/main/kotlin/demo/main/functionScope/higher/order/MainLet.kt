@@ -1,4 +1,4 @@
-package demo.main.functional.higher.order
+package demo.main.functionScope.higher.order
 
 fun main() {
     val end1 = Endereco(logradouro = "Rua A", num = 23, uf = "DF")

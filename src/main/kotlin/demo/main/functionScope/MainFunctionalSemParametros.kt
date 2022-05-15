@@ -1,4 +1,4 @@
-package demo.main.functional
+package demo.main.functionScope
 
 fun main() {
     val minhaFuncao: () -> Unit = ::test

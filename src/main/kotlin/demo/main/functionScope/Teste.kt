@@ -1,4 +1,4 @@
-package demo.main.functional
+package demo.main.functionScope
 
 class Teste: (Int, Int) -> Unit {
     override fun invoke(p1: Int, p2: Int) {

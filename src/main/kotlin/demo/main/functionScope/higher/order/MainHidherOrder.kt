@@ -1,4 +1,4 @@
-package demo.main.functional.higher.order
+package demo.main.functionScope.higher.order
 
 fun main() {
     test { }
