@@ -26,5 +26,18 @@ fun main() {
     run {
         println("Execução de run sem extensão")
     }
-    
+
+    println("\n================ Apply =============")
+    Endereco(logradouro = "Rua A Acular", num = 23, uf = "DF")
+        .apply {
+            enderecoCompleto = "$logradouro - $num, $uf".uppercase()
+        }.let(::println)
+
+
+    println("\n================ Also =============")
+    Endereco(logradouro = "Rua A Acular", num = 23, uf = "DF")
+        .also { println("Criando endereço")}
+        .apply {
+            enderecoCompleto = "$logradouro - $num, $uf".uppercase()
+        }.let(::println)
 }
