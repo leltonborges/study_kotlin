@@ -15,4 +15,10 @@ fun main() {
     end2.run {
         "$logradouro, $num".uppercase()
     }.let(::println)
+
+    println("\n================ WITH =============")
+    with(end2){
+        println(end2.uf)
+        println(end2.logradouro)
+    }
 }
