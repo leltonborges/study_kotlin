@@ -5,9 +5,13 @@ import java.util.*
 abstract class Conta(
     private val owner: String,
     private val numberAccount: Int = UUID.randomUUID().variant(),
-    private var balanceAccount: Double = 0.0
+    private var balanceAccount: Double = 0.0,
 ) {
-    companion object Contador{
+    val getOwner get() = this.owner
+    val getNumberAccount get() = this.numberAccount
+    val getBalanceAccount get() = this.balanceAccount
+
+    companion object Contador {
         var total: Int = 0
             private set
     }
@@ -21,8 +25,8 @@ abstract class Conta(
     abstract fun isSaldoSuficiente(value: Double): Boolean;
     abstract fun calcImpostoSaque(): Double;
 
-    protected fun sacar(saque: Double): Double{
-        if(this.isSaldoSuficiente(saque)){
+    protected fun sacar(saque: Double): Double {
+        if (this.isSaldoSuficiente(saque)) {
             val saque = this.calcImpostoSaque() * saque;
             this.balanceAccount -= saque;
             return saque;
