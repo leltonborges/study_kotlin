@@ -25,4 +25,23 @@ fun main() {
     enderecos.filter { e -> e.num != null }
         .let(::println)
 
+    //////////////////////////////////////////////////////
+
+    soma(1, 5) {
+        println(it)
+    }
+
+    println("Valida senha")
+    entra(123) {senha ->
+        senha == 123
+    }.let(::println)
+}
+
+fun soma(a: Int, b: Int, resultado: (Int) -> Unit) {
+    println("Soma sendo efetuada")
+    resultado(a + b)
+}
+
+fun entra(senha: Int, autenticado: (Int) -> Boolean ): Boolean {
+    return autenticado(senha)
 }
