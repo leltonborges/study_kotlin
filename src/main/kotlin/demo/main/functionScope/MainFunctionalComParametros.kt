@@ -54,6 +54,11 @@ fun main() {
 }
 
 fun soma(a: Int, b: Int): Int = a + b
+fun soma(a: Int, b: Int, result: (Int) -> Unit): Int {
+    val sum = a + b
+    result(sum)
+    return sum
+}
 
 class Soma : (Int, Int) -> Int {
     override fun invoke(num1: Int, num2: Int): Int = num1 + num2;
